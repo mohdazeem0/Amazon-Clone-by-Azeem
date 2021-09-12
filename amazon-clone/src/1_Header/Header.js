@@ -15,8 +15,8 @@ function componentName() {
           alt="amazonlogo"
         />{" "}
       </Link>
+      {/* search box  */}
       <div className="header__serach">
-        {/* search box  */}
         <input type="text" className="header__searchInput" />
         <SearchIcon className="header__searchIcon" />
       </div>
@@ -26,7 +26,7 @@ function componentName() {
         {/* 1st link */}
         <Link to="/login" className="header__link">
           <div className="header__option">
-            <span className="header__optionLineOne">Hello Azeem</span>
+            <span className="header__optionLineOne">Hello, Azeem</span>
             <span className="header__optionLineTwo">Sign In</span>
           </div>
         </Link>
