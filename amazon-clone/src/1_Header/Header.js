@@ -3,8 +3,10 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import { useStateValue } from "../0_ContextAPI/StateProvider";
 
 function componentName() {
+  const [{ cart }, dispatch] = useStateValue;
   return (
     <nav className="header">
       {/* logo  */}
@@ -52,7 +54,7 @@ function componentName() {
             {/* number of items added */}
             <span className="header__basketItems">
               <sup>
-                <sup>12</sup>
+                <sup>{cart.length}</sup>
               </sup>
             </span>
           </div>
