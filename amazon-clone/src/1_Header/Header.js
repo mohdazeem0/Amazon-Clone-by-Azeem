@@ -5,8 +5,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { useStateValue } from "../0_ContextAPI/StateProvider";
 
-function componentName() {
-  const [{ cart }, dispatch] = useStateValue;
+function Header() {
+  const [{ cart }, dispatch] = useStateValue();
+
   return (
     <nav className="header">
       {/* logo  */}
@@ -36,7 +37,7 @@ function componentName() {
         <Link to="/login" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
-            <span className="header__optionLineTwo">& Orders</span>
+            <span className="header__optionLineTwo">and Orders</span>
           </div>
         </Link>
         {/* 3rd link */}
@@ -54,7 +55,7 @@ function componentName() {
             {/* number of items added */}
             <span className="header__basketItems">
               <sup>
-                <sup>{cart.length}</sup>
+                <sup>{cart?.length}</sup>
               </sup>
             </span>
           </div>
@@ -66,4 +67,4 @@ function componentName() {
   );
 }
 
-export default componentName;
+export default Header;
