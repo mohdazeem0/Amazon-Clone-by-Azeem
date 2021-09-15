@@ -7,6 +7,7 @@ import { useStateValue } from "../0_ContextAPI/StateProvider";
 
 function Header() {
   const [{ cart }, dispatch] = useStateValue();
+  console.log(cart);
 
   return (
     <nav className="header">
