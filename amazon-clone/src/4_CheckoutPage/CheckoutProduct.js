@@ -13,21 +13,17 @@ function CheckoutProduct({ id, title, image, price, rating }) {
   };
   return (
     <div className="checkoutProduct">
-      <img className="checkoutProduct__image" src="prod1.jpg" alt="" />
+      <img className="checkoutProduct__image" src={image} alt="" />
       <div className="checkoutProduct__info">
-        <p className="checkoutProduct__title">
-          boAt Airdopes 441 TWS Ear-Buds with IWP Technology, Immersive Audio,
-          Up to 30H Total Playback, IPX7 Water Resistance, Super Touch
-          Controls,(Raging Red)
-        </p>
+        <p className="checkoutProduct__title">{title}</p>
 
         <p className="checkoutProduct__price">
           <small>₹</small>
-          <strong>646.8</strong>
+          <strong>{price}</strong>
         </p>
 
         <div className="checkoutProduct__rating">
-          {Array(5)
+          {Array(rating)
             .fill()
             .map((_, i) => (
               <p>⭐</p>
