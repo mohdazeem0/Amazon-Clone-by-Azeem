@@ -14,7 +14,7 @@ const reducer = (state, action) => {
       //Logic for adding item in cart
       break;
     case "REMOVE_FROM_CART":
-      return { state };
+      return { ...state };
       //Logic to remove item from cart
       break;
     default:

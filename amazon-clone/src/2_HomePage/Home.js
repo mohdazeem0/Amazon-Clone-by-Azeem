@@ -17,6 +17,7 @@ function Home() {
         />
         <Products
           id="002"
+          trb
           title="boAt Stone 180 5 Watt Truly Wireless Bluetooth Speaker (Blue)"
           price="899.00"
           rating={5}
