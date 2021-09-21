@@ -3,7 +3,7 @@ import { useStateValue } from "../0_ContextAPI/StateProvider";
 import "./CheckoutPage.css";
 import CheckoutProduct from "./CheckoutProduct";
 
-function CheckoutPage() {
+function CheckoutPage( ) {
   const [{ cart }] = useStateValue();
   return (
     <div>
